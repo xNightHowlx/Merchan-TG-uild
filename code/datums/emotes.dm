@@ -58,7 +58,9 @@
 	if(!msg)
 		return
 
-	user.log_message(msg, LOG_EMOTE)
+	if(ishuman(user) || user.ckey)
+		user.log_message(msg, LOG_EMOTE)
+		
 	var/dchatmsg = "<b>[user]</b> [msg]"
 
 	var/tmp_sound = get_sound(user)
