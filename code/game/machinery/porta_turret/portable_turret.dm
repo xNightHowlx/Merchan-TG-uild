@@ -931,7 +931,7 @@ DEFINE_BITFIELD(turret_flags, list(
 
 	togglelock(user)		// trying to unlock the interface
 
-			/obj/machinery/turretid/proc/togglelock(mob/user)
+/obj/machinery/turretid/proc/togglelock(mob/user)
 	if (allowed(user))
 		if(obj_flags & EMAGGED)
 			to_chat(user, "<span class='notice'>The turret control is unresponsive.</span>")
