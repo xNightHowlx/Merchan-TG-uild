@@ -418,7 +418,7 @@ GENE SCANNER
 					var/bandagetext = ""
 					if(H.bleedsuppress)
 						bandagetext = "Bandaged"
-					render_list += "<span class='alert ml-1'><b>Subject is bleeding! [bleedtext ? "([bleedtext])" : ""][bandagetext ? "(Bandaged)" : ""]</b></span>\n"
+					render_list += "<span class='alert ml-1'><b>Subject is bleeding! [bleedtext ? "([bleedtext])" : ""]</b></span>\n"
 			var/blood_percent =  round((C.blood_volume / BLOOD_VOLUME_NORMAL)*100)
 			var/blood_type = C.dna.blood_type
 			if(blood_id != /datum/reagent/blood) // special blood substance
