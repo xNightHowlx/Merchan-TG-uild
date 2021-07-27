@@ -415,9 +415,6 @@ GENE SCANNER
 						bleedtext = "Critical!"
 					else if(bleed_rate > 30)
 						bleedtext = "Extreme!"
-					var/bandagetext = ""
-					if(H.bleedsuppress)
-						bandagetext = "Bandaged"
 					render_list += "<span class='alert ml-1'><b>Subject is bleeding! [bleedtext ? "([bleedtext])" : ""]</b></span>\n"
 			var/blood_percent =  round((C.blood_volume / BLOOD_VOLUME_NORMAL)*100)
 			var/blood_type = C.dna.blood_type
