@@ -402,17 +402,18 @@ GENE SCANNER
 				var/mob/living/carbon/human/H = C
 				if(H.is_bleeding())
 					var/bleedtext = ""
-					if(H.bleed_rate <= 5)
+					var/bleed_rate = H.get_total_bleed_rate()
+					if(bleed_rate <= 5)
 						bleedtext = "Negligible"
-					else if(H.bleed_rate <= 10)
+					else if(bleed_rate <= 10)
 						bleedtext = "Minor"
-					else if(H.bleed_rate <= 15)
+					else if(bleed_rate <= 15)
 						bleedtext = "Moderate"
-					else if(H.bleed_rate <= 20)
+					else if(bleed_rate <= 20)
 						bleedtext = "Serious"
-					else if(H.bleed_rate <= 30)
+					else if(bleed_rate <= 30)
 						bleedtext = "Critical!"
-					else if(H.bleed_rate > 30)
+					else if(bleed_rate > 30)
 						bleedtext = "Extreme!"
 					var/bandagetext = ""
 					if(H.bleedsuppress)
